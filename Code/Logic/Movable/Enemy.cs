@@ -25,10 +25,5 @@ namespace Steampunk.Code.Logic
                 Destroy(gameObject);
             }
         }
-        
-        private void Update()
-        {
-            Debug.DrawRay(transform.position, _inputService.Axis * _heroSettings.RayDistance, Color.cyan);
-        }
     }
 }

@@ -18,12 +18,7 @@ namespace Steampunk.Code.Logic
 
         private void OnEnable() => 
             _healthEvent.Register(Death);
-
-        private void Awake()
-        {
-            Debug.Log(_loadingService, this);
-        }
-
+        
         private void Death(int currentHealth)
         {
             if (currentHealth < 0) {

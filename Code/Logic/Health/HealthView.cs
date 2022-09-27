@@ -22,12 +22,7 @@ namespace Steampunk.Code.Logic
             _healthChangedEvent.Register(UpdateText);
             UpdateText();
         }
-
-        private void Awake()
-        {
-            Debug.Log(_healthModel, this);
-        }
-
+        
         private void OnDisable() => 
             _healthChangedEvent.Unregister(UpdateText);
 

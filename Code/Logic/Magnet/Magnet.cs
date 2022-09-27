@@ -48,20 +48,14 @@ namespace Steampunk.Code.Logic
 
         private void RemoveBlocks(InputAction.CallbackContext callbackContext)
         {
-            Debug.Log("SDS");
-            for (var index = 0; index < _magnetizedObjects.Length; index++)
-            {
+            for (var index = 0; index < _magnetizedObjects.Length; index++) 
                 _magnetizedObjects[index] = null;
-            }
         }
 
 
-        public void Attraction(InputAction.CallbackContext context)
-        {
+        public void Attraction(InputAction.CallbackContext context) => 
             _callbackContext = context;
-            Debug.Log(context);
-        }
-            
+
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;
